@@ -19,7 +19,7 @@ RUN yum -y install --enablerepo=epel,remi pkgconfig glib2-devel gettext libxml2-
 RUN yum -y install --enablerepo=epel,remi mysql mysql-server mysql-devel
  
 # setup perlbrew
-RUN export PERLBREW_ROOT=/opt/perlbrew && curl -L http://install.perlbrew.pl | bash
+RUN export PERLBREW_ROOT=/opt/perlbrew && curl -L https://install.perlbrew.pl | bash
 RUN source /opt/perlbrew/etc/bashrc && perlbrew install perl-5.18.2
 RUN source /opt/perlbrew/etc/bashrc && perlbrew use perl-5.18.2 && perlbrew install-cpanm
 
